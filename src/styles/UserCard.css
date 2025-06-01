@@ -1,0 +1,100 @@
+.user-card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.user-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.user-avatar {
+  margin-right: 16px;
+  background-color: #1890ff;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.user-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.user-details {
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.detail-item .anticon {
+  color: #1890ff;
+}
+
+.last-active {
+  font-size: 12px;
+  color: #999;
+}
+
+.user-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* Hover effects */
+.user-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.user-card .ant-card-body {
+  padding: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-card {
+    max-width: 100%;
+  }
+  
+  .user-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+  
+  .user-tags {
+    justify-content: center;
+  }
+  
+  .user-actions {
+    flex-direction: column;
+  }
+  
+  .user-actions .ant-btn {
+    width: 100%;
+  }
+} 
