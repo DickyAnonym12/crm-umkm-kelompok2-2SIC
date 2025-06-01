@@ -1,27 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import MainLayout from './components/MainLayout'
-import Dashboard from './pages/Dashboard'
-
-function App() {
-
-  return (
-   
-    <Routes>
-      <Route element={<MainLayout />} >
-      <Route path="/" element={<Dashboard/>} />
-      </Route>
-    </Routes>
-  )
-}
-
-export default App
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/admin/MainLayout';
 import UserLayout from './components/layouts/UserLayout';
 import Dashboard from './pages/admin/Dashboard';
@@ -49,8 +27,7 @@ const ProtectedRoute = ({ children, isAdmin = false }) => {
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
+    <Routes>
   {/* Auth Routes */}
   <Route path="/login" element={<Login />} />
   <Route path="/register" element={<Register />} />
@@ -80,9 +57,6 @@ const App = () => {
     <Route index element={<Navigate to="/dashboard" replace />} />
   </Route>
 </Routes>
-
-
-    </Router>
   );
 };
 
